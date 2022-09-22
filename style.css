@@ -1,0 +1,15 @@
+.gridcontainer {
+    display: flex;
+    width: 500px;
+    height: 500px;
+    flex-direction: row;
+    gap: 0x;
+    flex-wrap: wrap;
+}
+    
+.block {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: blue;
+}
