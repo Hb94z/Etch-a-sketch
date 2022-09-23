@@ -1,6 +1,24 @@
 
 starterGrid()
 
+let colours = document.querySelector("div");
+colours.addEventListener("mouseover", () => {
+    event.target.style.backgroundColor = 'black';
+});
+
+let newGrid = document.querySelector('button')
+newGrid.addEventListener("click", event => {
+    if (event.target.nodeName == "BUTTON") {
+        let userInput = howMany();
+          if (userInput > 100) { return }
+        deleteChild();
+        let input = userInput * userInput;
+        let pixel = 500 / userInput;
+        for (let i = 0; i < input; i++) {
+        let i = addGrid(pixel)
+    }}
+});
+
 function starterGrid () {
     let userInput = 16;
     let input = userInput * userInput;
@@ -10,42 +28,10 @@ function starterGrid () {
 }
 }
 
-let colours = document.querySelector("div");
-colours.addEventListener("mouseover", () => {
-    
-    event.target.style.backgroundColor = 'black';
-});
-
-let reset = document.querySelector('#reset');
-console.log(reset);
-reset.addEventListener("click", () => {
-colours.style.backgroundColor = 'white';
-
-}
-);
-
-function resetCanvas() {
-    let clear = document.querySelector('div');
-clear.style.backgroundColor = 'white';
-console.log(userInput)
-}
-
-
-let newGrid = document.querySelector('button')
-newGrid.addEventListener("click", event => {
-    if (event.target.nodeName == "BUTTON") {
-        deleteChild();
-        let userInput = howMany();
-        let input = userInput * userInput;
-        let pixel = 500 / userInput;
-        for (let i = 0; i < input; i++) {
-        let i = addGrid(pixel)
-    }}
-});
-
 function howMany() {
 
-    let userInput = prompt("how many?");
+    let userInput = prompt("Please enter number of tiles(maximum: 100)");
+    if (userInput > 100) alert("Please try again with 100 or less tiles");
     return userInput
 }
 

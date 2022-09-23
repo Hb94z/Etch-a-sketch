@@ -1,18 +1,66 @@
 .gridcontainer {
-    display: flex;
+   display: flex;
     width: 500px;
     height: 500px;
     flex-direction: row;
-    gap: 0x;
     flex-wrap: wrap;
     outline-style: solid;
-    border-color: black;
     outline-color: black;
+    align-self: flex-end;
+    box-sizing: border-box;
 }
     
 .block {
-  display: flex;
+  display: block;
   flex-direction: column;
   text-align: center;
   color: blue;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 100px;
+  gap: 50px;
+}
+
+
+h1 {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  font-size: 50px;
+}
+
+.main {
+
+  display: flex;
+  gap: 100px;
+  margin-top: 50px;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+footer {
+  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: 'Roboto', sans-serif;
 }
